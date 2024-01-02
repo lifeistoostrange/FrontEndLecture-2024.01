@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01_display</title>
+</head>
+<body>
+    <!--
+        모든 태그는 박스형 형태로 구성
+        모든 태그는 display 스타일 속성이 있다
+        display : 어떻게 보일 것 인가 속성
+            > inline / block
+
+    block : <div>, <p>, <h>, <ol>, <ul>, <form>...
+        
+    특징
+    해당 라인의 모든 너비를 차지. (가로 길이 화면 끝)
+    - 해당 태그를 감싼 태그의 너비와 동일
+    항상 꽉 채우기 때문에 언제나 새로운 라인에서 시작
+    
+    -->
+    <p style="background-color: gray; color:orange;"> p 태그는 display 속성이 블럭 입니다.1</p>
+    <p> p 태그는 display 속성이 블럭 입니다.2</p>
+
+    <!-- 
+        inline : <span>, <a>, <img>, <b>, <i>
+
+        특징
+        해당 html 요소의 "내용" 만큼의 너비를 차지
+        새로운 라인에서 시작하지 않음
+        인라인은 너비 설정 불가능
+    -->
+    <a href="#">a 태그는 display 속성값이 inline입니다.</a>
+    <a href="#">a 태그는 display 속성값이 inline입니다.2</a>
+    <span style="border:3px solid red;">span 태그르는 display 속성값이 인라인입니다.3</span>
+
+    <!-- div : 블록태그 이면서 HTML의 태그들을 여러개 묶을 때 사용하는 태그-->
+    <div style="background-color: goldenrod; color:green;">
+        <h1>block tag exercise</h1>
+        <p>여러 요소들을 div태그로 묶어서 표현</p>
+    </div>
+
+    <hr/>
+    <div style="background-color: goldenrod; color: green; width: 500px; display: inline-block;">
+        <h1> 블록 태그 연습블록 태그 연습블록 태그 연습블록 태그 연습 </h1>
+        <p> 여러 요소들을 div태그로 묶어서 표현</p>
+    </div>
+    <div style="background-color: goldenrod; color: red; width: 500px; display: inline-block;">
+        <h1> 블록 태그 연습블록 태그 연습블록 태그 연습블록 태그 연습 </h1>
+        <p> 여러 요소들을 div태그로 묶어서 표현</p>
+    </div>
+
+    <!-- block 와 inline 장점을 같이 사용할수있는 속성
+        display : inline-block;
+        block : 높이와 너비를 지정 가능 / inline : 불가능
+        block : 무조건 새로운 라인 / inline : 너비에 맞춰서 라인 생성
+
+        inline-block : 높이와 너비를 지정하면서 너비에 맞춰서 라인 생성
+    -->
+    <hr/>
+    <a href="#">a 태그는 display 속성값이 inline입니다.</a><p style="display: inline-block;"> 여러 요소들을 div태그로 묶어서 표현</p>
+    
+    <!--
+        태그가 2개 있다
+        inline + inline : 가로 2개 세팅
+        block + block : 세로 2개 세팅 (block속성은 항상 새로운 줄에서 시작)
+        inline + block (block + inline) : 세로 2개 세팅
+        inline + inline-block : 가로 두개 세팅
+        block + inline-block : 가로 두개 세팅
+        inline-block + inline-block : 옆으로 붙이기 좋음
+        
+    -->
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleForm</title>
+</head>
+<body>
+<div style="border: 1px solid black;">
+    <form>
+        1. 이름<input type="text" placeholder="이름"><br/>
+        2. 성별 <input type="radio" name="gender" id="male"> <label for="male">남자</label>
+                <input type="radio" name="gender" id="female"> <label for="female">여자</label><br/>
+        3. 직업 <select>
+                <option value="1">프로그래머</option>
+                <option value="2">학생</option>
+                <option value="3">선생</option>
+                </select><br/>
+        4. 취미 <input type="checkbox" id="sleep"><label for="sleep"><label for="sleep">잠자기</label>
+                <input type="checkbox" id="eat"><label for="eat"><label for="eat">먹기</label>
+                <input type="checkbox" id="breath"><label for="breath"><label for="breath">숨쉬기</label>
+                <input type="checkbox" id="null"><label for="null"><label for="null">멍때리기</label>
+                <br/>
+        5. 애인 <input type="radio" name="lover" id="married"> <label for="married">있다</label>
+                <input type="radio" name="lover" id="solo"> <label for="solo">없다</label><br/>
+        6. <input type="submit" value="확인"/>
+           <input type="reset" value="취소"/><br/>
+        7. <textarea cols="30" rows="5"></textarea> <br/>
+        8. 빈값 : <input type="text" required> <br/>
+        9. 사이즈 : <input type="text" style="width: 500px;"><br/>
+        10. 초기값 : <input type="text" value="초기값"><br/>
+        11. 초기값 변경X : <input type="text" value="초기값" readonly><br/>
+        12. 입력 한계 : <input type="text" maxlength="5"><br/>
+        13. 미사용 : <input type="text" disabled><br/>
+                
+    </form>
+</div>
+</body>
+</html>

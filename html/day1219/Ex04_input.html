@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04_input</title>
+</head>
+<body>
+    <!--
+        input : 클라이언트가 값을 입력할수 있도록 도와주는 태그
+
+        입려그이 종류가 많기때문에 "type"라는 속성이 필수
+        type="text" : 기본값
+        type="속성" : 다양한 모양을 구현
+        (*빈 태그)
+    -->
+
+    이름 : <input /> <br/>
+    별명 : <input type="text" /> <br/>
+    비밀번호 : <input type="password" /> <br/>
+    <hr/>
+
+    <!--
+        checkbox : 다중 항목을 다중 선택할 때 (동의서 작성)
+        radio : 다중 항목을 단일 선택할 때 (성별)
+
+    -->
+
+    <input type="checkbox" /> <input type="radio" />
+    <br/>
+    <hr/>
+
+
+    <!-- name 속성 : "radio 타입에서만" 같은 그룹을 표시하는 속성
+        특징 : 아무거나 넣어도 동일하기만 하면 묶임-->
+    성별 :  <input type="radio" name="gender" /> 남성
+            <input type="radio" name="gender" /> 여성
+
+    <hr/>
+
+    체크 :  <label for="check1">1</label><input type="checkbox" id="check1" />
+            <label for="check2">2</label><input type="checkbox" id="check2" />
+            <br/>
+
+    <!-- label 태그 : input태그와 문자를 연결해주는 태그
+        input : checkbox, radio, text...
+        input 태그의 설명(문자) : 성별, 이름
+        
+        *연결방법
+        <input id = ""/>
+        <label for = ""/> 내용 </label>
+        input 태그의 id속성과 label 태그의 for  속성값이 동일하면 연결
+        *id속성값은 태그별로 유일한 값으로 작성하는것을 권고
+
+    -->
+    성별 :  <input type="radio" name="gender" id="남성" /><label for="남성">남성</label>
+            <input type="radio" name="gender" id="genderfemale" /><label for="genderfemale">여성</label>
+
+    <br/>
+    <hr/>
+    <input type="color"/>
+    <br/>
+    <hr/>
+    날짜 : <input type="date" value="2023-12-19" min="2023-12-18" max="2023-12-21"/> <br/>
+
+    범위 <input type="range" min="0" max="10" value="9"/>
+
+    <br/>
+    숫자 : <input type="number" min="0" max="199999999" value="15" step="10" />
+    <br/>
+    힌트 : <input type="text" placeholder="나이를 입력해주세요"/>
+    <br/>
+    오토포커스 : <input type="text" autofocus/><!--창 등장 시 바로 입력 대기시키는 명령어 autofocus-->
+    <br/>
+    오토체크<br/>
+    <input type="checkbox" checked/> <input type="radio" /><br/><!--시작시 자동으로 체크시키기-->
+    <input type="checkbox" /> <input type="radio" checked /><br/>
+    휴대폰번호 : <input type="text" pattern="(010|011)-\d{3,4}-\d{4}"><br/>
+    버튼만들기<br/>
+    <button>버튼</button>
+    <input type="button" value="버튼2"/><br/>
+    
+</body>
+</html>
