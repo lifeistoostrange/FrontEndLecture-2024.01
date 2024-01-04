@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>공약수를찾자</title>
     <style>
         body {
             margin: 50px;
@@ -17,7 +17,7 @@
         }
     </style>
     <script>
-        function findDevisor() {
+        function findDevisors() {
             let firstNumber = parseInt(document.getElementById('num1').value);
             let secondNumber = parseInt(document.getElementById('num2').value);
             let commonDivisors = [];
@@ -40,7 +40,7 @@
     <hr>
     <input type="text" id="num1" placeholder="양의 정수를 입력해주세요">
     <input type="text" id="num2" placeholder="양의 정수를 입력해주세요">
-    <button onclick="findDevisor()">확인</button>
+    <button onclick="findDevisors()">확인</button>
     <hr>
     <div id="result"></div>
 </body>
