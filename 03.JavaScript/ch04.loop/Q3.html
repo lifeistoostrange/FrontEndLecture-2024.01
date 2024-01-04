@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px;
+            text-align: center; 
+        }
+
+        #result {
+            text-align: left; 
+            margin: 0 auto; 
+            width: fit-content; 
+        }
+    </style>
+    <script>
+        function findDevisor() {
+            let firstNumber = parseInt(document.getElementById('num1').value);
+            let secondNumber = parseInt(document.getElementById('num2').value);
+            let commonDivisors = [];
+
+            for (let i = 1; i <= Math.min(firstNumber, secondNumber); i++) {
+                if (firstNumber % i === 0 && secondNumber % i === 0) {
+                    commonDivisors.push(i);
+                }
+            }
+
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `두 숫자의 공약수는 ${commonDivisors.join(', ')}가 있습니다`;
+            
+
+        }
+    </script>
+</head>
+<body style="margin: 50px">
+    <h3>공약수 찾기</h3>
+    <hr>
+    <input type="text" id="num1" placeholder="양의 정수를 입력해주세요">
+    <input type="text" id="num2" placeholder="양의 정수를 입력해주세요">
+    <button onclick="findDevisor()">확인</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단을외자</title>
+    <style>
+        body {
+            margin: 50px;
+            text-align: center; 
+        }
+
+        #result {
+            text-align: left; 
+            margin: 0 auto; 
+            width: fit-content; 
+        }
+    </style>
+    <script>
+        function displayGuguDan() {
+            let num = document.getElementById('numInput').value;
+
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            for (let i = 1; i <= 9; i++) {
+                let result = num * i;
+                resultDiv.innerHTML += `${num} * ${i} = ${result}<br>`;
+            }
+            
+        }
+    </script>
+</head>
+
+<body style="margin: 50px">
+    <h3>구구단을 외자</h3>
+    <hr>
+    <input type="text" id="numInput" placeholder="1에서 9 사이의 숫자를 입력해주세요">
+    <button onclick="displayGuguDan()">확인</button>
+    <hr>
+    <div id="result"></div> 
+</body>
+</html>
