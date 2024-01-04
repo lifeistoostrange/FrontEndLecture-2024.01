@@ -1,5 +1,5 @@
 // 다중 선택 - switch
-let score = Math.ceil(Math.random() * 60) + 40;         //40~100 사이의 정수
+let score = Math.ceil(Math.random() * 60) + 40;         //41~100 사이의 정수
 let grade = '';
 
 
