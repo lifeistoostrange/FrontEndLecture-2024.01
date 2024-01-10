@@ -1,28 +1,28 @@
 // 두 개의 세자리수를 곱해서 나온 결과가 palindrome일때
 // 가장 큰 palindrome  수와 어떤 수를 곱해서 나온 결과인가?
 
-function isPailindrome(string) {
+function isPalindrome(string) {
     let reverseStr = string.split('').reverse().join('');
-    return string == reverseStr;
+    return string === reverseStr;
 }
 
-function findBiggestPalindrome() {   
+function findLargestPalindrome() {
+    let largestPalindrome = 0;
+    let factors = [];
+
     for (let i = 100; i < 1000; i++) {
-        for (let j = 100; j < 1000; j++) { 
-            let str = `${i * j}`;
-            let palindrome = isPailindrome(str)
-            console.log(palindrome)
-            if (str == palindrome && biggestPalindrome < palindrome) {
-                var biggestPalindrome = palindrome;
+        for (let j = 100; j < 1000; j++) {
+            let product = i * j;
+            if (isPalindrome(String(product)) && product > largestPalindrome) {
+                largestPalindrome = product;
+                factors = [i, j];
             }
         }
-    } 
-    
-    return biggestPalindrome;
-    
+    }
+
+    return {largestPalindrome, factors};
 }
 
-console.log(`세 자리수 까지의 곱 중 가장 큰 palindrome 수는 ${findBiggestPalindrome()}`);
+const {largestPalindrome, factors} = findLargestPalindrome();
 
-// C:\Workspace\WebProject\03.JavaScript\ch07.globalobjects\04.connectingstrings.js
-// 에서 파일명만 출력하시오
+console.log(`세자리수의 곱중 가장 큰 palindrome 수는 ${largestPalindrome}이며 이는 ${factors[0]} * ${factors[1]}입니다.`);
